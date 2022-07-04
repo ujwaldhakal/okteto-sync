@@ -1,0 +1,10 @@
+name: api
+namespace: "staging-namespace"
+command: "php-fpm"
+context: "staging-server"
+container: php
+sync:
+  - .:/var/www/html
+  - $HOME/.composer:/root/.composer
+persistentVolume:
+  enabled: false
